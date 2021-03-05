@@ -1,7 +1,9 @@
 import 'package:desafio_yeslist/bottle_chooser/bottle_chooser.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  final listEquals = DeepCollectionEquality.unordered().equals;
   test('Deve informar o volume do galão de água', () {
     final bottleChooser = BottleChooser(gallon: 5, bottles: []);
 
@@ -33,20 +35,19 @@ void main() {
     BottleChooser bottleChooser =
         BottleChooser(gallon: 7, bottles: [1, 3, 4.5, 1.5, 3.5]);
 
-    expect(bottleChooser.chooseBottles(), equals([1, 1.5, 4.5]));
+    expect(listEquals(bottleChooser.chooseBottles(), ([1, 1.5, 4.5])), true);
     expect(bottleChooser.remainingWater, equals(0));
 
     bottleChooser.gallon = 5;
     bottleChooser.bottles = [1, 3, 4.5, 1.5];
 
-    expect(bottleChooser.chooseBottles(), equals([4.5, 1]));
+    expect(listEquals(bottleChooser.chooseBottles(), ([4.5])), true);
     expect(bottleChooser.remainingWater, equals(0.5));
 
-    // O terceiro exemplo enviado no email é igual ao segundo
-    bottleChooser.gallon = 5;
-    bottleChooser.bottles = [1, 3, 4.5, 1.5];
+    bottleChooser.gallon = 10.4;
+    bottleChooser.bottles = [6, 1.3, 1.5, 3];
 
-    expect(bottleChooser.chooseBottles(), equals([4.5, 1]));
-    expect(bottleChooser.remainingWater, equals(0.5));
+    expect(listEquals(bottleChooser.chooseBottles(), ([3, 6, 1.3])), true);
+    expect(bottleChooser.remainingWater, equals(0));
   });
 }
