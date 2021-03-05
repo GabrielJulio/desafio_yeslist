@@ -6,9 +6,8 @@ void main() {
   testWidgets('Deve indicar que está na Tela Base',
       (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
+    final titleFinder = find.text('Desafio YesList');
 
-    expect(find.text('Tela Base'), findsOneWidget);
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsNothing);
+    expect(titleFinder, findsOneWidget);
   });
 }
