@@ -1,9 +1,11 @@
 class BottleChooser {
   late num _gallon;
-  List<num> _bottles = [];
-  num _remainingWater = 0;
+  List<num> _bottles;
+  double _remainingWater = 0;
 
-  BottleChooser({required gallon, bottles});
+  BottleChooser({required double gallon, required List<num> bottles})
+      : _gallon = gallon,
+        _bottles = bottles;
 
   // Getters
   num get gallon => _gallon;
@@ -25,5 +27,11 @@ class BottleChooser {
         if (bottle > 0) _bottles.add(bottle);
       });
     }
+  }
+
+  // Methods
+  List<num> chooseBottles() {
+    List<num> bestCombination = [];
+    return bestCombination;
   }
 }
