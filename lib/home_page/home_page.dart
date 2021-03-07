@@ -50,6 +50,18 @@ class _HomePageState extends State<HomePage> {
                     return Container();
                   }
                 }),
+                SizedBox(
+                  height: 20,
+                ),
+                Consumer<BottleChooser>(builder: (_, bottleChooser, __) {
+                  if (bottleChooser.remainingWater > 0) {
+                    return Row(children: [
+                      Text('Sobrou ${bottleChooser.remainingWater}L de água')
+                    ]);
+                  } else {
+                    return Container();
+                  }
+                }),
               ],
             ),
           ),
