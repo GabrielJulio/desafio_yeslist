@@ -38,7 +38,11 @@ class _HomePageState extends State<HomePage> {
                           'A melhor combinção é usando as garrafas de volume:'),
                       Row(
                         children: bottleChooser.bestCombination
-                            .map((bottle) => Text(' ${bottle}L'))
+                            .map((bottle) => Text(
+                                  ' ${bottle}L',
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold),
+                                ))
                             .toList(),
                       )
                     ]);

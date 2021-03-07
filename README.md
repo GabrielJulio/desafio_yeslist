@@ -15,19 +15,19 @@
 </p>
 
 <h4 align="center">
-	🏗️   Em construção  🏗️
+	🌎 <a href="http://challenge-yeslist.web.app/">Online</a>
 </h4>
 
 Tabela de conteúdos
 =================
-   * [Sobre o projeto](#-sobre-o-projeto)
-   * [Funcionalidades](#-funcionalidades)
+   * [Sobre o projeto](#user-content-ℹ️-sobre-o-projeto)
+   * [Funcionalidades](#user-content-️-funcionalidades)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
      * [Rodando o Projeto](#user-content--rodando-o-projeto)
      * [Rodando os Testes](#user-content--rodando-os-testes)
    * [Tecnologias](#-tecnologias)
-   * [Autor](#-autor)
+   * [Autor](#user-content-autor)
    * [Licença](#user-content--licença)
 
 
@@ -54,7 +54,7 @@ Projeto desenvolvido para o desafio proposto pela YesList!
 
 Este projeto estará rodando online e o link será disponibilizado assim que o projeto for concluído.
 
-*  Link para acesso online
+*  [Link para acesso online](http://challenge-yeslist.web.app/)
 
 💡Caso queira iniciar o projeto em formato mobile é necessário ter um **Emulador Andorid** ou um **Celular Android** em modo debug conectado no seu computador.
 
@@ -63,7 +63,6 @@ Este projeto estará rodando online e o link será disponibilizado assim que o p
 Antes de começar, você vai precisar ter instalado em seu computador as seguintes ferramentas:
 - [Git](https://git-scm.com).
 - [Flutter](https://flutter.dev/docs/get-started/install).
-- [Android Studio](https://developer.android.com/studio).
 - [Chrome](https://www.google.com/chrome/) (Você também pode usar um celular ou emulador Android).
 - [Android Studio](https://developer.android.com/studio).
 - IDE de sua preferência. Exemplo: [VSCode](https://code.visualstudio.com/)
