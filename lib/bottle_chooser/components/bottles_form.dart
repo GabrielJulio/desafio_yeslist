@@ -64,6 +64,7 @@ class _BottlesFormState extends State<BottlesForm> {
                                   validator: (bottle) {
                                     if (bottle == null || bottle.isEmpty)
                                       return 'Obrigatório';
+                                    bottle.replaceAll(',', '.');
                                     if (num.parse(bottle) <= 0)
                                       return 'Precisa ser maior que 0';
                                     return null;
