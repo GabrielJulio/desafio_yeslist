@@ -1,48 +1,27 @@
+import 'package:desafio_yeslist/bottle_chooser/bottle_chooser.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'home_page/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(YesListChallengeApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class YesListChallengeApp extends StatelessWidget {
+  final title = 'Desafio YesList';
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Desafio YesList',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(title: 'Desafio YesList'),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  HomePage({Key? key, this.title}) : super(key: key);
-
-  final String? title;
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title!),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Tela Base',
-            ),
-          ],
+    return ChangeNotifierProvider(
+      create: (_) => BottleChooser(),
+      lazy: false,
+      child: MaterialApp(
+        title: title,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
+        home: HomePage(title: title),
       ),
     );
   }

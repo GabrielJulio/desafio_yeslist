@@ -3,8 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/GabrielJulio/desafio_yeslist?color=%2304D361">
-    <a href="https://github.com/GabrielJulio/desafio_yeslist/commits/master">
+  <a href="https://github.com/GabrielJulio/desafio_yeslist/commits/develop">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/GabrielJulio/desafio_yeslist">
   </a>
     
@@ -16,20 +15,19 @@
 </p>
 
 <h4 align="center">
-	🏗️   Em construção  🏗️
+	🌎 <a href="http://challenge-yeslist.web.app/">Online</a>
 </h4>
 
 Tabela de conteúdos
 =================
-   * [Sobre o projeto](#-sobre-o-projeto)
-   * [Funcionalidades](#-funcionalidades)
+   * [Sobre o projeto](#user-content-ℹ️-sobre-o-projeto)
+   * [Funcionalidades](#user-content-️-funcionalidades)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
      * [Rodando o Projeto](#user-content--rodando-o-projeto)
      * [Rodando os Testes](#user-content--rodando-os-testes)
-   * [Como contribuir no projeto](#-como-contribuir-no-projeto)
    * [Tecnologias](#-tecnologias)
-   * [Autor](#-autor)
+   * [Autor](#user-content-autor)
    * [Licença](#user-content--licença)
 
 
@@ -37,6 +35,7 @@ Tabela de conteúdos
 
 Desafio YesList - é capaz de determinar a melhor combinação de garrafas de água para se encher um galão também de água.
 
+Principal é o **develop**, o branch **main**  é apenas para produção e deve ter o histórico mais limpo possível.
 
 Projeto desenvolvido para o desafio proposto pela YesList!
 
@@ -44,10 +43,10 @@ Projeto desenvolvido para o desafio proposto pela YesList!
 
 ## ⚙️ Funcionalidades
 
-- [ ] Informar garrafas, um galão de água e seus volumes de água em **litros**.
-- [ ] Ser informado quantas garrafas serão usadas na melhor combinação.
-- [ ] Ser informado quais os volumes das garrafas serão usadas na melhor combinação.
-- [ ] Informar a sobra de água em **litros** caso não seja possível esvaziar completamente as garrafas utilizadas.
+- [x] Informar garrafas, um galão de água e seus volumes de água em **litros**.
+- [x] Ser informado quantas garrafas serão usadas na melhor combinação.
+- [x] Ser informado quais os volumes das garrafas serão usadas na melhor combinação.
+- [x] Informar a sobra de água em **litros** caso não seja possível esvaziar completamente as garrafas utilizadas.
 
 ---
 
@@ -55,7 +54,7 @@ Projeto desenvolvido para o desafio proposto pela YesList!
 
 Este projeto estará rodando online e o link será disponibilizado assim que o projeto for concluído.
 
-*  Link para acesso online
+*  [Link para acesso online](http://challenge-yeslist.web.app/)
 
 💡Caso queira iniciar o projeto em formato mobile é necessário ter um **Emulador Andorid** ou um **Celular Android** em modo debug conectado no seu computador.
 
@@ -64,7 +63,6 @@ Este projeto estará rodando online e o link será disponibilizado assim que o p
 Antes de começar, você vai precisar ter instalado em seu computador as seguintes ferramentas:
 - [Git](https://git-scm.com).
 - [Flutter](https://flutter.dev/docs/get-started/install).
-- [Android Studio](https://developer.android.com/studio).
 - [Chrome](https://www.google.com/chrome/) (Você também pode usar um celular ou emulador Android).
 - [Android Studio](https://developer.android.com/studio).
 - IDE de sua preferência. Exemplo: [VSCode](https://code.visualstudio.com/)
@@ -104,15 +102,6 @@ $ flutter pub get
 # Inicie os testes
 $ flutter test
 ```
-
----
-
-## 💪 Como contribuir no projeto
-
-1. Faça um novo branch apartir do **develop** do projeto.
-2. Faça as suas alterações: `git checkout -b feature/my-feature-name`
-3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "My new feature"`
-4. Envie as suas alterações: `git push origin feature/my-feature-name`
 
 ---
 
