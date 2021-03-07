@@ -1,4 +1,7 @@
+import 'package:desafio_yeslist/bottle_chooser/bottle_chooser.dart';
+import 'package:desafio_yeslist/bottle_chooser/components/bottle_chooser_form.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key, this.title}) : super(key: key);
@@ -15,15 +18,37 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title!),
+        centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Tela Base',
+        child: Container(
+          height: MediaQuery.of(context).size.height * .7,
+          width: MediaQuery.of(context).size.width * .7,
+          child: ClipRect(
+            child: Column(
+              children: [
+                BottleChooserForm(),
+                SizedBox(
+                  height: 30,
+                ),
+                Consumer<BottleChooser>(builder: (_, bottleChooser, __) {
+                  if (bottleChooser.bestCombination.length > 0) {
+                    return Row(children: [
+                      Text(
+                          'A melhor combinção é usando as garrafas de volume:'),
+                      Row(
+                        children: bottleChooser.bestCombination
+                            .map((bottle) => Text(' ${bottle}L'))
+                            .toList(),
+                      )
+                    ]);
+                  } else {
+                    return Container();
+                  }
+                }),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
