@@ -3,8 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/GabrielJulio/desafio_yeslist?color=%2304D361">
-    <a href="https://github.com/GabrielJulio/desafio_yeslist/commits/master">
+  <a href="https://github.com/GabrielJulio/desafio_yeslist/commits/develop">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/GabrielJulio/desafio_yeslist">
   </a>
     
@@ -27,7 +26,6 @@ Tabela de conteúdos
      * [Pré-requisitos](#pré-requisitos)
      * [Rodando o Projeto](#user-content--rodando-o-projeto)
      * [Rodando os Testes](#user-content--rodando-os-testes)
-   * [Como contribuir no projeto](#-como-contribuir-no-projeto)
    * [Tecnologias](#-tecnologias)
    * [Autor](#-autor)
    * [Licença](#user-content--licença)
@@ -37,6 +35,7 @@ Tabela de conteúdos
 
 Desafio YesList - é capaz de determinar a melhor combinação de garrafas de água para se encher um galão também de água.
 
+Principal é o **develop**, o branch **main**  é apenas para produção e deve ter o histórico mais limpo possível.
 
 Projeto desenvolvido para o desafio proposto pela YesList!
 
@@ -104,15 +103,6 @@ $ flutter pub get
 # Inicie os testes
 $ flutter test
 ```
-
----
-
-## 💪 Como contribuir no projeto
-
-1. Faça um novo branch apartir do **develop** do projeto.
-2. Faça as suas alterações: `git checkout -b feature/my-feature-name`
-3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "My new feature"`
-4. Envie as suas alterações: `git push origin feature/my-feature-name`
 
 ---
 

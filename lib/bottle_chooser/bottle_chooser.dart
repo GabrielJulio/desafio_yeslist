@@ -1,33 +1,26 @@
-class BottleChooser {
-  late num _gallon;
-  List<num> _bottles;
-  num _remainingWater = 0;
+import 'package:flutter/material.dart';
 
-  BottleChooser({required double gallon, required List<num> bottles})
-      : _gallon = gallon,
-        _bottles = bottles;
+class BottleChooser extends ChangeNotifier {
+  num gallon = 0;
+  List<num> bottles = [];
+  num _remainingWater = 0;
+  bool _isLoading = false;
+
+  List<num> bestCombination = [];
+
+  BottleChooser();
 
   // Getters
-  num get gallon => _gallon;
-
-  List<num> get bottles => _bottles;
-
   int get bottlesAmount => bottles.length;
 
   num get remainingWater => _remainingWater;
 
-  // Setters
-  set gallon(num newValue) {
-    if (newValue > 0) _gallon = newValue;
-  }
+  bool get isLoading => _isLoading;
 
-  set bottles(List<num> newValues) {
-    if (newValues.isNotEmpty) {
-      _bottles.clear();
-      newValues.forEach((bottle) {
-        if (bottle > 0) _bottles.add(bottle);
-      });
-    }
+  // Setters
+  set isLoading(bool newValue) {
+    _isLoading = newValue;
+    notifyListeners();
   }
 
   // Methods
@@ -45,6 +38,8 @@ class BottleChooser {
       }
     });
 
+    this.bestCombination = bestCombination;
+    notifyListeners();
     return bestCombination;
   }
 }
