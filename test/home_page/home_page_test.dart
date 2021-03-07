@@ -1,19 +1,14 @@
-import 'package:desafio_yeslist/home_page/home_page.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:desafio_yeslist/bottle_chooser/components/bottle_chooser_form.dart';
+import 'package:desafio_yeslist/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('Deve indicar que está na Tela Base',
+  testWidgets('Deve carregar o formulário de garrafas',
       (WidgetTester tester) async {
-    await tester.pumpWidget(MediaQuery(
-        data: MediaQueryData(),
-        child: MaterialApp(
-            home: HomePage(
-          title: 'título',
-        ))));
+    await tester.pumpWidget(YesListChallengeApp());
 
-    final textFinder = find.text('Tela Base');
-    expect(textFinder, findsOneWidget);
+    final formFinder = find.byType(BottleChooserForm);
+
+    expect(formFinder, findsOneWidget);
   });
 }

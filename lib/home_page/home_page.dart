@@ -22,29 +22,32 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Container(
-          height: MediaQuery.of(context).size.height * .6,
-          width: MediaQuery.of(context).size.width * .6,
-          child: Column(
-            children: [
-              BottleChooserForm(),
-              SizedBox(
-                height: 30,
-              ),
-              Consumer<BottleChooser>(builder: (_, bottleChooser, __) {
-                if (bottleChooser.bestCombination.length > 0) {
-                  return Row(children: [
-                    Text('A melhor combinção é usando as garrafas de volume:'),
-                    Row(
-                      children: bottleChooser.bestCombination
-                          .map((bottle) => Text(' ${bottle}L'))
-                          .toList(),
-                    )
-                  ]);
-                } else {
-                  return Container();
-                }
-              })
-            ],
+          height: MediaQuery.of(context).size.height * .7,
+          width: MediaQuery.of(context).size.width * .7,
+          child: ClipRect(
+            child: Column(
+              children: [
+                BottleChooserForm(),
+                SizedBox(
+                  height: 30,
+                ),
+                Consumer<BottleChooser>(builder: (_, bottleChooser, __) {
+                  if (bottleChooser.bestCombination.length > 0) {
+                    return Row(children: [
+                      Text(
+                          'A melhor combinção é usando as garrafas de volume:'),
+                      Row(
+                        children: bottleChooser.bestCombination
+                            .map((bottle) => Text(' ${bottle}L'))
+                            .toList(),
+                      )
+                    ]);
+                  } else {
+                    return Container();
+                  }
+                }),
+              ],
+            ),
           ),
         ),
       ),

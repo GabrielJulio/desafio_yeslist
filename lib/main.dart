@@ -5,10 +5,10 @@ import 'package:provider/provider.dart';
 import 'home_page/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(YesListChallengeApp());
 }
 
-class MyApp extends StatelessWidget {
+class YesListChallengeApp extends StatelessWidget {
   final title = 'Desafio YesList';
 
   @override

@@ -13,7 +13,7 @@ class BottleChooser extends ChangeNotifier {
   // Getters
   int get bottlesAmount => bottles.length;
 
-  num get remainingWater => _remainingWater;
+  num get remainingWater => num.parse(_remainingWater.toStringAsFixed(2));
 
   bool get isLoading => _isLoading;
 

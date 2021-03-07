@@ -43,10 +43,10 @@ Projeto desenvolvido para o desafio proposto pela YesList!
 
 ## ⚙️ Funcionalidades
 
-- [ ] Informar garrafas, um galão de água e seus volumes de água em **litros**.
-- [ ] Ser informado quantas garrafas serão usadas na melhor combinação.
-- [ ] Ser informado quais os volumes das garrafas serão usadas na melhor combinação.
-- [ ] Informar a sobra de água em **litros** caso não seja possível esvaziar completamente as garrafas utilizadas.
+- [x] Informar garrafas, um galão de água e seus volumes de água em **litros**.
+- [x] Ser informado quantas garrafas serão usadas na melhor combinação.
+- [x] Ser informado quais os volumes das garrafas serão usadas na melhor combinação.
+- [x] Informar a sobra de água em **litros** caso não seja possível esvaziar completamente as garrafas utilizadas.
 
 ---
 

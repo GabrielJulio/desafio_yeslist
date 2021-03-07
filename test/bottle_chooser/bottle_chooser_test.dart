@@ -57,6 +57,6 @@ void main() {
     bottleChooser.bottles = [6, 1.3, 1.5, 3];
 
     expect(listEquals(bottleChooser.chooseBottles(), ([3, 6, 1.3])), true);
-    expect(bottleChooser.remainingWater, equals(0));
+    expect(bottleChooser.remainingWater, equals(0.1));
   });
 }
